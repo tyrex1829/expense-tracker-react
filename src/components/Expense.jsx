@@ -57,12 +57,14 @@ function Expense() {
           </Button>
         </div>
       </div>
-      <ul>
+      <ul className="flex flex-col gap-6">
         {list.map((i) => (
-          <li className="flex justify-between items-center gap-10" key={i.id}>
-            <span>{i.name}</span>
-            <span>:</span>
-            <span>₹{i.amount}</span>
+          <li
+            className="bg-slate-300 shadow-lg rounded-md px-6 py-3 flex justify-between items-center gap-16"
+            key={i.id}
+          >
+            <span className="text-2xl font-medium">{i.name}</span>
+            <span className="text-lg">₹{i.amount}</span>
             <button
               onClick={() => {
                 deleteList(i.id);
