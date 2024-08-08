@@ -1,14 +1,11 @@
 import { useState } from "react";
 import "./App.css";
+import Expense from "./components/Expense";
 
 function App() {
   const [count, setCount] = useState(0);
 
-  return (
-    <div className="text-3xl font-bold text-center">
-      <h1>Expense Tracker</h1>
-    </div>
-  );
+  return <Expense />;
 }
 
 export default App;
